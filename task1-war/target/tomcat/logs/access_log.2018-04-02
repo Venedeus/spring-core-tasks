@@ -1,0 +1,13 @@
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:01:51 +0300] "GET /task1-war HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:01:53 +0300] "GET /task1-war/ HTTP/1.1" 200 874 http-bio-8080-exec-3 1832
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:01:56 +0300] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:02:05 +0300] "GET /signup HTTP/1.1" 404 - http-bio-8080-exec-6 0
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:02:24 +0300] "GET /task1-war/index?user=user&password=user01 HTTP/1.1" 404 981 http-bio-8080-exec-10 6
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:02:33 +0300] "GET /signup HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:04:00 +0300] "GET /task1-war/ HTTP/1.1" 200 874 http-bio-8080-exec-1 283
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:04:03 +0300] "GET /signup HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:05:39 +0300] "GET /task1-war/ HTTP/1.1" 200 884 http-bio-8080-exec-2 1676
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:05:42 +0300] "GET /task-war1/signup HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:06:34 +0300] "GET /task1-war HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:06:34 +0300] "GET /task1-war/ HTTP/1.1" 200 884 http-bio-8080-exec-3 132
+0:0:0:0:0:0:0:1 - - [02/Apr/2018:16:06:38 +0300] "GET /task-war1/signup HTTP/1.1" 404 - http-bio-8080-exec-5 0

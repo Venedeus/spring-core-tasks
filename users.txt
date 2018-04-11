@@ -1,0 +1,52 @@
+[
+  {
+    "name": "admin",
+    "role": "ADMIN",
+    "password": "admin01",
+    "email": "venedey.e@gmail.com",
+    "birthday": {
+      "year": 1987,
+      "month": 4,
+      "day": 1
+    },
+    "tickets": 1,
+    "id": 1
+  },
+  {
+    "name": "user",
+    "role": "USER",
+    "password": "user01",
+    "email": "venedey@mail.ru",
+    "birthday": {
+      "year": 1987,
+      "month": 12,
+      "day": 30
+    },
+    "tickets": 2,
+    "id": 2
+  },
+  {
+    "name": "user1",
+    "role": "USER",
+    "password": "user1",
+    "email": "user1@mail.com",
+    "birthday": {
+      "year": 2018,
+      "month": 1,
+      "day": 31
+    },
+    "id": 3
+  },
+  {
+    "name": "user2",
+    "role": "ADMIN",
+    "password": "user2",
+    "email": "user2@mail.com",
+    "birthday": {
+      "year": 2018,
+      "month": 1,
+      "day": 31
+    },
+    "id": 4
+  }
+]

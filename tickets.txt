@@ -1,0 +1,82 @@
+[
+  {
+    "eventId": 1,
+    "airDateTime": {
+      "date": {
+        "year": 2018,
+        "month": 4,
+        "day": 1
+      },
+      "time": {
+        "hour": 11,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      }
+    },
+    "seat": 1,
+    "userId": 1,
+    "ticketStatus": "BOOKED",
+    "id": 0
+  },
+  {
+    "eventId": 1,
+    "airDateTime": {
+      "date": {
+        "year": 2018,
+        "month": 4,
+        "day": 2
+      },
+      "time": {
+        "hour": 11,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      }
+    },
+    "seat": 10,
+    "userId": 1,
+    "ticketStatus": "PURCHASED",
+    "id": 2
+  },
+    {
+    "eventId": 1,
+    "airDateTime": {
+      "date": {
+        "year": 2018,
+        "month": 4,
+        "day": 2
+      },
+      "time": {
+        "hour": 11,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      }
+    },
+    "seat": 10,
+    "userId": 1,
+    "ticketStatus": "BOOKED",
+    "id": 4
+  },
+      {
+    "eventId": 1,
+    "airDateTime": {
+      "date": {
+        "year": 2018,
+        "month": 4,
+        "day": 2
+      },
+      "time": {
+        "hour": 11,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      }
+    },
+    "seat": 10,
+    "userId": 1,
+    "ticketStatus": "PURCHASED",
+    "id": 3
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "name": "admin",
+    "password": "admin01",
+    "email": "venedey.e@gmail.com",
+    "role": "ADMIN",
+    "tickets": 1,
+    "birthday": {
+  "year": 1987,
+  "month": 04,
+  "day": 01
+}
+  },
+  {
+    "id": 2,
+    "name": "user",
+    "password": "user01",
+    "email": "venedey@mail.ru",
+    "role": "USER",
+    "tickets": 2,
+    "birthday":{
+  "year": 1987,
+  "month": 12,
+  "day": 30
+}
+  }
+]

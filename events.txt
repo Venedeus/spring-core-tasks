@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Rock concert #1",
+    "auditoriumId": 1,
+    "rating": "HIGH",
+    "basePrice": 10,
+    "schedule": [
+      {
+        "date": {
+          "month": 4,
+          "year": 2018,
+          "day": 1
+        },
+        "time": {
+          "hour": 11,
+          "nano": 0,
+          "minute": 0,
+          "second": 0
+        }
+      }
+    ],
+    "id": 1
+  },
+  {
+    "name": "Rock concert #2",
+    "auditoriumId": 1,
+    "rating": "LOW",
+    "basePrice": 11,
+    "schedule": [
+      {
+        "date": {
+          "month": 4,
+          "year": 2018,
+          "day": 2
+        },
+        "time": {
+          "hour": 12,
+          "nano": 0,
+          "minute": 0,
+          "second": 0
+        }
+      }
+    ],
+    "id": 2
+  },
+  {
+    "name": "Rock concert #11",
+    "auditoriumId": 1,
+    "rating": "MID",
+    "basePrice": 12,
+    "schedule": [
+      {
+        "date": {
+          "year": 2018,
+          "month": 4,
+          "day": 2
+        },
+        "time": {
+          "hour": 12,
+          "minute": 0,
+          "second": 0,
+          "nano": 0
+        }
+      }
+    ],
+    "id": 3
+  }
+]

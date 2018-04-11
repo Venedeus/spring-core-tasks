@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+    <bean
+            class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:props.properties</value>
+            </list>
+        </property>
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="systemPropertiesMode">
+            <util:constant
+                    static-field="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+        </property>
+    </bean>
+
+    <bean id="admin" class="com.epam.cources.springcore.beans.User">
+        <constructor-arg value="admin"/>
+    </bean>
+
+    <bean id="user" class="com.epam.cources.springcore.beans.User">
+        <constructor-arg value="user"/>
+    </bean>
+
+    <bean id="userService" class="com.epam.cources.springcore.services.UserService">
+        <constructor-arg>
+            <bean class="com.epam.cources.springcore.daos.DAOJsonFileImpl">
+                <constructor-arg>
+                    <bean class="com.epam.cources.springcore.parsers.UserParser">
+                        <constructor-arg>
+                            <bean class="java.io.FileReader">
+                                <constructor-arg value="${file.users}"/>
+                            </bean>
+                        </constructor-arg>
+                    </bean>
+                </constructor-arg>
+                <property name="path" value="${file.users}"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    <bean id="eventService" class="com.epam.cources.springcore.services.EventService">
+        <constructor-arg>
+            <bean class="com.epam.cources.springcore.daos.DAOJsonFileImpl">
+                <constructor-arg>
+                    <bean class="com.epam.cources.springcore.parsers.EventParser">
+                        <constructor-arg>
+                            <bean class="java.io.FileReader">
+                                <constructor-arg value="${file.events}"/>
+                            </bean>
+                        </constructor-arg>
+                    </bean>
+                </constructor-arg>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    <bean id="auditoriumService" class="com.epam.cources.springcore.services.AuditoriumService">
+        <constructor-arg>
+            <bean class="com.epam.cources.springcore.daos.DAOJsonFileImpl">
+                <constructor-arg>
+                    <bean class="com.epam.cources.springcore.parsers.AuditoriumParser">
+                        <constructor-arg>
+                            <bean class="java.io.FileReader">
+                                <constructor-arg value="${file.auditoriums}"/>
+                            </bean>
+                        </constructor-arg>
+                    </bean>
+                </constructor-arg>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    <bean id="bookingService"
+          class="com.epam.cources.springcore.services.BookingService">
+        <constructor-arg>
+            <bean class="com.epam.cources.springcore.daos.DAOJsonFileImpl">
+                <constructor-arg>
+                    <bean
+                            class="com.epam.cources.springcore.parsers.TicketParser">
+                        <constructor-arg>
+                            <bean class="java.io.FileReader">
+                                <constructor-arg value="${file.tickets}"/>
+                            </bean>
+                        </constructor-arg>
+                    </bean>
+                </constructor-arg>
+            </bean>
+        </constructor-arg>
+        <property name="validator" ref="validator"/>
+        <property name="discountService" ref="discountService"/>
+    </bean>
+
+    <bean id="discountService"
+          class="com.epam.cources.springcore.services.DiscountService">
+        <constructor-arg>
+            <list>
+                <bean
+                        class="com.epam.cources.springcore.strategies.BirthdayStrategy"/>
+                <bean
+                        class="com.epam.cources.springcore.strategies.DenaryStrategy"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="blankTicket" class="com.epam.cources.springcore.beans.Ticket" scope="prototype"/>
+
+    <bean id="validator"
+          class="com.epam.cources.springcore.services.Validator">
+        <property name="eventService" ref="eventService"/>
+        <property name="userService" ref="userService"/>
+        <property name="auditoriumService" ref="auditoriumService"/>
+    </bean>
+
+
+</beans>

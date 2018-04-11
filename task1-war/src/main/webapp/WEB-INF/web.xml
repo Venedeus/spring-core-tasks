@@ -1,0 +1,44 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <servlet-class>com.epam.cources.springcore.servlets.IndexServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>signup</servlet-name>
+        <servlet-class>com.epam.cources.springcore.servlets.SignupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>signup</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>com.epam.cources.springcore.servlets.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>event</servlet-name>
+        <servlet-class>com.epam.cources.springcore.servlets.EventServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>event</servlet-name>
+        <url-pattern>/event</url-pattern>
+    </servlet-mapping>
+</web-app>

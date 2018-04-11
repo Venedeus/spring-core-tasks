@@ -1,0 +1,5 @@
+com\epam\cources\springcore\servlets\IndexServlet.class
+com\epam\cources\springcore\servlets\RegisterServlet.class
+com\epam\cources\springcore\servlets\AbstractServlet.class
+com\epam\cources\springcore\servlets\EventServlet.class
+com\epam\cources\springcore\servlets\SignupServlet.class

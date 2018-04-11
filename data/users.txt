@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1.0,
+    "email": "venedey.e@gmail.com",
+    "role": "ADMIN"
+  },
+  {
+    "id": 2.0,
+    "email": "venedey@mail.ru",
+    "role": "USER"
+  }
+]
