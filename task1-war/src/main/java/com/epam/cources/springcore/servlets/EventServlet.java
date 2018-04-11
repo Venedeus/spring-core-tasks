@@ -1,5 +1,6 @@
 package com.epam.cources.springcore.servlets;
 
+import com.epam.cources.springcore.beans.Auditorium;
 import com.epam.cources.springcore.beans.Event;
 
 import javax.servlet.ServletException;
@@ -15,11 +16,15 @@ import java.util.List;
 public class EventServlet extends AbstractServlet {
     private static final String LIST_RATING = "listOfRating";
     private static final String EVENT_JSP = "event.jsp";
+    private static final String LIST_AUDITORIUMS = "listOfAuditoriums";
 
     @Override
     protected void process(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute(LIST_RATING, Event.getListOfRating());
-        System.out.println("Ratings: " + Event.getListOfRating());
+
+        req.setAttribute(LIST_AUDITORIUMS, getAppConfig()
+                .getAuditoriumService().getAllByNames());
+
         req.getRequestDispatcher(EVENT_JSP).forward(req, resp);
     }
 }
